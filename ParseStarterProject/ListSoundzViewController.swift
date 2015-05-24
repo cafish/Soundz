@@ -49,9 +49,13 @@ class ListSoundzViewController: UIViewController, UITableViewDataSource, UITable
         
         var user = sound["User"] as! PFUser
         
+        var audio = sound["Audio"] as! PFFile
+        
         var cell = tableView.dequeueReusableCellWithIdentifier("SoundCell") as! SoundCell
         
-//        cell.textLabel!.text = user["username"] as? String
+        cell.audioFile = audio
+        
+        cell.nameLabel.text = user["username"] as? String
         
         return cell
     }

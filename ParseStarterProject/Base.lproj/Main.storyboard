@@ -113,6 +113,9 @@
                                                     <state key="normal" image="play.png">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="playPauseTapped:" destination="gE3-cv-QvV" eventType="touchUpInside" id="lYB-Nq-0aJ"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -126,6 +129,11 @@
                                                 <constraint firstAttribute="trailing" secondItem="Qh0-6O-Ufj" secondAttribute="trailing" constant="10" id="lvb-uy-uWs"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="Qh0-6O-Ufj" id="RHV-Wa-2dd"/>
+                                            <outlet property="playPauseButton" destination="e78-Qi-24r" id="wFA-Sb-p45"/>
+                                            <outlet property="userImageView" destination="rIT-VV-i4c" id="9iw-KG-aPK"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
