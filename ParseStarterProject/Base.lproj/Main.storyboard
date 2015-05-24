@@ -78,9 +78,56 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="oBN-hf-cnW">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="oBN-hf-cnW">
                                 <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SoundCell" rowHeight="120" id="gE3-cv-QvV" customClass="SoundCell" customModule="ParseStarterProject" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gE3-cv-QvV" id="bVB-3c-tem">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rIT-VV-i4c">
+                                                    <rect key="frame" x="10" y="5" width="20" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="20" id="fl0-I1-TaY"/>
+                                                        <constraint firstAttribute="height" constant="20" id="gyZ-hi-loW"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qh0-6O-Ufj">
+                                                    <rect key="frame" x="40" y="5" width="550" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="Ar3-oq-NUd"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e78-Qi-24r">
+                                                    <rect key="frame" x="275" y="45" width="51" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="B51-IR-lSO"/>
+                                                        <constraint firstAttribute="width" constant="51" id="L2h-vW-3I6"/>
+                                                    </constraints>
+                                                    <state key="normal" image="play.png">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="rIT-VV-i4c" firstAttribute="top" secondItem="bVB-3c-tem" secondAttribute="top" constant="5" id="IGg-IT-2ES"/>
+                                                <constraint firstItem="rIT-VV-i4c" firstAttribute="leading" secondItem="bVB-3c-tem" secondAttribute="leading" constant="10" id="LAu-QM-gH2"/>
+                                                <constraint firstAttribute="centerY" secondItem="e78-Qi-24r" secondAttribute="centerY" constant="-10" id="NgQ-9Y-TIn"/>
+                                                <constraint firstItem="rIT-VV-i4c" firstAttribute="centerY" secondItem="Qh0-6O-Ufj" secondAttribute="centerY" id="YFf-qX-N38"/>
+                                                <constraint firstAttribute="centerX" secondItem="e78-Qi-24r" secondAttribute="centerX" id="ZDB-9r-bMN"/>
+                                                <constraint firstItem="Qh0-6O-Ufj" firstAttribute="leading" secondItem="rIT-VV-i4c" secondAttribute="trailing" constant="10" id="b8E-qG-ovu"/>
+                                                <constraint firstAttribute="centerX" secondItem="e78-Qi-24r" secondAttribute="centerX" id="eh0-QJ-QVV"/>
+                                                <constraint firstAttribute="trailing" secondItem="Qh0-6O-Ufj" secondAttribute="trailing" constant="10" id="lvb-uy-uWs"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -183,4 +230,7 @@
             <point key="canvasLocation" x="1610" y="265"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="play.png" width="51" height="50"/>
+    </resources>
 </document>

@@ -49,9 +49,9 @@ class ListSoundzViewController: UIViewController, UITableViewDataSource, UITable
         
         var user = sound["User"] as! PFUser
         
-        var cell = UITableViewCell()
+        var cell = tableView.dequeueReusableCellWithIdentifier("SoundCell") as! SoundCell
         
-        cell.textLabel!.text = user["username"] as? String
+//        cell.textLabel!.text = user["username"] as? String
         
         return cell
     }
