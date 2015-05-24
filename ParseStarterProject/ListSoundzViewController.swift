@@ -5,6 +5,7 @@
 //  Created by Jiajia Luo on 5/23/15.
 //  Copyright (c) 2015 Jiajia Luo. All rights reserved.
 //
+//  Add to GitHub
 
 import UIKit
 import Parse
